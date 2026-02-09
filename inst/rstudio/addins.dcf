@@ -1,0 +1,4 @@
+Name: Data Cleaner
+Description: LLM-assisted data cleaning code generator
+Binding: datacleaner_addin
+Interactive: true

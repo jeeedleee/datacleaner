@@ -1,0 +1,17 @@
+Package: datacleaner
+Type: Package
+Title: LLM-Assisted Data Cleaning Code Generator
+Version: 0.1.0
+Authors@R: person("Author", "Name", email = "author@example.com", role = c("aut", "cre"))
+Description: An RStudio Addin that uses Large Language Models to generate
+    data cleaning code based on user-specified rules for each column.
+License: MIT + file LICENSE
+Encoding: UTF-8
+RoxygenNote: 7.3.3
+Imports: shiny, miniUI, DT, httr2, readr, readxl, rstudioapi, jsonlite,
+        yaml
+NeedsCompilation: no
+Packaged: 2026-02-09 02:32:18 UTC; 周帅
+Author: Author Name [aut, cre]
+Maintainer: Author Name <author@example.com>
+Depends: R (>= 4.1.0)

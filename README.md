@@ -1,5 +1,10 @@
 # datacleaner
 
+<!-- badges: start --
+[![R-CMD-check](https://github.com/jeeedleee/datacleaner/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jeeedleee/datacleaner/actions/workflows/R-CMD-check.yaml)
+[![CRAN status](https://www.r-pkg.org/badges/version/datacleaner)](https://CRAN.R-project.org/package=datacleaner)
+-- badges: end -->
+
 一个 RStudio 插件，用于数据清洗的智能助手。
 
 ## 功能特点
@@ -12,7 +17,24 @@
 
 ## 安装方法
 
-### 方法一：使用一键安装脚本（推荐）
+### 方式一：从 GitHub 安装（推荐）
+
+```r
+# 安装 remotes 包（如果还没有安装）
+install.packages("remotes")
+
+# 从 GitHub 安装 datacleaner
+remotes::install_github("jeeedleee/datacleaner")
+```
+
+### 方式二：从 R-Universe 安装
+
+```r
+# 添加 jeeedleee 的 universe
+install.packages("datacleaner", repos = c("https://jeeedleee.r-universe.dev", "https://cloud.r-project.org"))
+```
+
+### 方式三：下载源码本地安装
 
 1. 下载本仓库所有文件到同一文件夹
 2. 在 RStudio 中运行：
@@ -28,7 +50,7 @@ source("install.R")
 - 安装 datacleaner 包
 - 验证安装
 
-### 方法二：手动安装
+### 方式四：手动安装
 
 如果自动安装失败，可以手动安装：
 
@@ -40,7 +62,13 @@ install.packages(c("shiny", "miniUI", "DT", "httr2",
                    "jsonlite", "yaml"))
 ```
 
-2. 安装 datacleaner：
+2. 从源码安装 datacleaner：
+
+```r
+remotes::install_github("jeeedleee/datacleaner")
+```
+
+或下载后本地安装：
 
 ```r
 install.packages("datacleaner_0.1.0.tar.gz", repos = NULL, type = "source")
@@ -92,25 +120,34 @@ install.packages("datacleaner_0.1.0.tar.gz", repos = NULL, type = "source")
 > A: API 地址已固定为 `https://537-ai.net`，无需额外配置。
 
 **Q: 如何更新到新版本？**
-> A: 下载最新版本后，重新运行安装脚本即可。
+> A: 重新运行安装命令即可：
+> ```r
+> remotes::install_github("jeeedleee/datacleaner")
+> ```
 
 **Q: 安装后找不到插件？**
 > A: 请确保已重启 RStudio，然后在 Addins 菜单中查找「数据清洗助手」。
 
 ## 系统要求
 
-- R >= 3.5.0
+- R >= 4.1.0
 - RStudio >= 1.2
 - Windows 用户可能需要安装 [Rtools](https://cran.r-project.org/bin/windows/Rtools/)
+
+## 开发计划
+
+- [ ] 支持更多数据源（数据库、JSON 等）
+- [ ] 保存常用清洗规则模板
+- [ ] 支持更多 LLM 模型
+- [ ] 提交到 CRAN
 
 ## 联系方式
 
 如有问题或建议，请联系：[jeeedleee14@gmail.com](mailto:jeeedleee14@gmail.com)
 
-## 版本信息
+## 许可证
 
-- 当前版本：v0.1.0
-- 许可证：请查看包内 LICENSE 文件
+MIT License © 2026 jeeedleee
 
 ---
 
